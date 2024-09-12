@@ -1,9 +1,13 @@
 from coinspot import FullAccessAPIV2
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 if __name__ == "__main__":
     # Replace with your API key and secret
-    API_KEY = ''
-    API_SECRET = ''
+    API_KEY = os.environ.get("API_KEY")
+    API_SECRET = os.environ.get("API_SECRET")
 
     # Withdraw details
     COIN_TYPE = 'BTC'          # Coin to withdraw, e.g., BTC, LTC, DOGE
